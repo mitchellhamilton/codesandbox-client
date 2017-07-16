@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { createSelector } from 'reselect';
 import { Prompt } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
@@ -53,10 +53,10 @@ type State = {
 };
 
 const FullSize = styled.div`
+  composes: ${fadeIn(0)};
   height: 100%;
   width: 100%;
   pointer-events: ${props => (props.inactive ? 'none' : 'all')};
-  ${fadeIn(0)}
 `;
 
 const mapStateToProps = createSelector(

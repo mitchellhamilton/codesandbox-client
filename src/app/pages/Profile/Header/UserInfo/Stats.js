@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import Stat from 'app/components/Stat';
 import delayEffect from '../../../../utils/animation/delay-effect';
 
 const Container = styled.div`
+  composes: ${delayEffect(0.1)};
   float: right;
   flex: 1;
   display: flex;
@@ -15,8 +16,6 @@ const Container = styled.div`
   margin-bottom: 4rem;
   max-width: 450px;
   font-size: 1.25rem;
-
-  ${delayEffect(0.1)};
 `;
 
 type Props = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 const CenteredText = styled.div`
   display: inline-flex;

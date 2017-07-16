@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import FunctionIconSvg from 'react-icons/lib/fa/code';
 import DirectoryIconSvg from 'react-icons/lib/go/file-directory';
 import Entry from 'app/pages/Sandbox/Editor/Workspace/EntryContainer';
@@ -16,7 +16,7 @@ type Props = {
   alternative?: boolean,
 };
 const LeftOffset = styled.div`
-  padding-left: ${props => props.depth}rem;
+  padding-left: ${props => `${props.depth}rem`};
 `;
 
 export default class File extends React.PureComponent {

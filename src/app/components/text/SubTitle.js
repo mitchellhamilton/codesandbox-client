@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import delayEffect from '../../utils/animation/delay-effect';
 
 export default styled.h2`
-  ${props => props.delay != null && delayEffect(props.delay || 0)}
+  composes: ${props => props.delay != null && delayEffect(props.delay || 0)}
   text-align: center;
   width: 100%;
   font-size: 1.75rem;

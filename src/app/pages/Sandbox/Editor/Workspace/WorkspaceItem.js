@@ -1,35 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import ExpandIcon from 'react-icons/lib/md/keyboard-arrow-down';
 
 const ChildContainer = styled.div`
+  composes: ${({ disabled }) => disabled && css`
+  pointer-events: none;
+
+  &:after {
+    content: "${disabled || ''}";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+`}
   position: relative;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid ${props => props.theme.background2};
   overflow: ${props => (props.open ? 'inherit' : 'hidden')};
   height: ${props => (props.open ? '100%' : 0)};
-
-  ${({ disabled }) => disabled && `
-    pointer-events: none;
-
-    &:after {
-      content: "${disabled || ''}";
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: absolute;
-
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-  `}
 `;
 
 const ItemHeader = styled.div`
@@ -57,7 +56,7 @@ const ExpandIconContainer = styled(ExpandIcon)`
   right: 1rem;
   font-size: 1rem;
 
-  transform: rotateZ(${props => (props.open ? 0 : 90)}deg);
+  transform: rotateZ(${props => `${props.open ? 0 : 90  }deg`});
 `;
 
 type Props = {

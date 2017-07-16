@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import type { CurrentUser } from 'common/types';
 
 import Row from 'app/components/flex/Row';

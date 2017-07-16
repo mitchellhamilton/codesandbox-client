@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'emotion/react';
 
 import MoreInfoIcon from 'react-icons/lib/md/arrow-drop-down';
 
 import Tooltip from 'app/components/Tooltip';
 
 const styles = props =>
-  `
+  css`
   display: flex !important;
   transition: 0.3s ease all;
   flex-direction: row;
@@ -21,7 +21,7 @@ const styles = props =>
   box-sizing: inherit;
   border-bottom: 2px solid transparent;
   z-index: 1;
-  ${props.highlight ? `
+  ${props.highlight ? css`
       background-color: ${props.theme.secondary.darken(0.1)()};
       color: white;
       border-bottom: 1px solid ${props.theme.secondary.darken(0.1)()};
@@ -29,7 +29,7 @@ const styles = props =>
       &:hover {
         background-color: ${props.theme.secondary.darken(0.2)()};
       }
-  ` : `
+  ` : css`
 
     &:hover {
       color: rgba(255,255,255, 1);
@@ -39,30 +39,29 @@ const styles = props =>
 `;
 
 const Title = styled.span`
-  padding-left: 0.5rem;
-  ${props => !props.unresponsive && `
+  composes: ${props => !props.unresponsive && css`
   @media (max-width: 1300px) {
     display: none;
   }`}
+  padding-left: 0.5rem;
 `;
 
 const Action = styled.div`
-  ${styles}
+  composes: ${styles};
 `;
 
 const ActionLink = styled(Link)`
-  ${styles}
+  composes: ${styles};
   text-decoration: none;
 `;
 
 const ActionA = styled.a`
-  ${styles}
+  composes: ${styles};
   text-decoration: none;
 `;
 
 const ActionTooltip = styled(Tooltip)`
-  ${styles}
-  ${props => props.disabledAction && `
+  composes:${styles} ${props => props.disabledAction && css`
     color: rgba(255,255,255,0.3);
     cursor: default;
 

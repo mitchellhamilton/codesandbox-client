@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 const getColor = ({ right, offMode, secondary, theme }) => {
   if (right) return secondary ? theme.secondary : theme.primary;

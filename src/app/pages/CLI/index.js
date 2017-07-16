@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 

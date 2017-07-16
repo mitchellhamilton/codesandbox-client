@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import ProjectIcon from 'react-icons/lib/go/file-code';
 import FunctionIcon from 'react-icons/lib/fa/code';

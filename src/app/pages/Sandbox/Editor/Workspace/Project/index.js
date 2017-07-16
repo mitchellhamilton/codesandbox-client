@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { Link } from 'react-router-dom';
 import ConfirmLink from 'app/components/ConfirmLink';
 import LinkButton from 'app/components/buttons/LinkButton';

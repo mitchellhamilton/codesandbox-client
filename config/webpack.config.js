@@ -42,7 +42,7 @@ const getOutput = () =>
       };
 
 const config = {
-  devtool: __DEV__ ? 'eval' : 'source-map',
+  devtool: __DEV__ ? 'cheap-module-source-map' : 'source-map',
 
   entry: {
     app: [require.resolve('./polyfills'), path.join(paths.appSrc, 'index.js')],
@@ -66,7 +66,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        include: paths.src,
+        include: [paths.src, /emotion/],
         exclude: [/eslint\.js$/],
         loader: 'babel-loader',
         options: babelConfig
@@ -153,7 +153,7 @@ const config = {
     extensions: ['.js', '.json'],
 
     alias: {
-      moment: 'moment/moment.js'
+      moment: 'moment/moment.js',
     }
   },
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import CloseIcon from 'react-icons/lib/md/close';
 import InfoIcon from 'react-icons/lib/md/info';
 import ErrorIcon from 'react-icons/lib/md/error';

@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'emotion/react';
 import { NavLink } from 'react-router-dom';
 import Row from '../../components/flex/Row';
 import delayEffect from '../../utils/animation/delay-effect';
 
 const NavigationLink = styled(NavLink)`
+  composes: ${delayEffect(0.2)} ${({ border }) => border && css`border-right: 1px solid rgba(255, 255, 255, 0.2)`};
   transition: 0.3s ease all;
 
   display: block;
@@ -16,10 +17,6 @@ const NavigationLink = styled(NavLink)`
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-
-  ${({ border }) => border && `border-right: 1px solid rgba(255, 255, 255, 0.2)`};
-
-  ${delayEffect(0.2)}
 
   &:hover {
     color: white;

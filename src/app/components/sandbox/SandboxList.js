@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
@@ -52,8 +52,8 @@ const Body = styled.tbody`
 `;
 
 const SandboxRow = styled.tr`
+  composes: ${props => delayEffect(0.25 + props.index * 0.05, false)};
   transition: 0.3s ease all;
-  ${props => delayEffect(0.25 + props.index * 0.05, false)};
   border: none;
   margin: 0;
 

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import delayEffect from '../../utils/animation/delay-effect';
 
 export default styled.div`
-  ${props => delayEffect(props.delay || 0)}
+  composes: ${props => delayEffect(props.delay || 0)}
 `;

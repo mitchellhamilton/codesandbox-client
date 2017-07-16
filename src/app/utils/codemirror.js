@@ -1,6 +1,6 @@
 import CodeMirror from 'codemirror';
 import emmet from '@emmetio/codemirror-plugin';
-import { injectGlobal, keyframes } from 'styled-components';
+import { injectGlobal, keyframes } from 'emotion/react';
 import theme from 'common/theme';
 
 import 'codemirror/lib/codemirror.css';

@@ -2,7 +2,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { spring, Motion } from 'react-motion';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { connect } from 'react-redux';
 import theme from '../../common/theme';
 

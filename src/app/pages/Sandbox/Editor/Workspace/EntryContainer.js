@@ -1,10 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'emotion/react';
 
 import theme from 'common/theme';
 
 export const getContainerStyles = props => {
   const color = props.alternative ? theme.primary : theme.secondary;
-  let styles = `
+  let styles = css`
+    composes: ${props.active || props.editing ? '' : css`
+    &:hover {
+      background-color: ${color.clearer(0.9)()};
+      color: ${theme.background.lighten(5)()};
+      border-color: ${color.darken(0.4)()};
+    }
+      `}} ${() => {}}
     transition: 0.3s ease all;
     position: relative;
     display: flex;
@@ -20,12 +27,6 @@ export const getContainerStyles = props => {
     user-select: none;
 
     &:hover {
-      ${props.active || props.editing ? '' : `
-        background-color: ${color.clearer(0.9)()};
-        color: ${theme.background.lighten(5)()};
-        border-color: ${color.darken(0.4)()};
-      `}
-
       > div {
         opacity: 1; !important
       }
@@ -33,30 +34,30 @@ export const getContainerStyles = props => {
   `;
 
   if (props.editing) {
-    styles += `
+    styles += ` ${css`
       color: ${theme.white()};
       background-color: ${color.clearer(0.9)()};
-    `;
+    `}`;
 
     if (props.nameValidationError) {
-      styles += `
+      styles += ` ${css`
         border-color: ${theme.red()} !important;
         background-color: ${theme.redBackground.clearer(0.4)()} !important;
-      `;
+      `}`;
     }
   }
 
   if (props.active) {
-    styles += `
+    styles += ` ${css`
       color: ${theme.white()} !important;
       border-color: ${color()} !important;
       background-color: ${color.lighten(0.1).clearer(0.8)()} !important;
-    `;
+    `}`;
   }
 
   return styles;
 };
 
 export default styled.span`
-  ${props => getContainerStyles(props)}
+  composes: ${props => getContainerStyles(props)}
 `;

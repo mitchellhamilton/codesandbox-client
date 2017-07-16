@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import CodeMirror from 'codemirror';
 
 import { getCodeMirror } from 'app/utils/codemirror';

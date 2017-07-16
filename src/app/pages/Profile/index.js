@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import Fullscreen from 'app/components/flex/Fullscreen';
 import userActionCreators from 'app/store/entities/users/actions';

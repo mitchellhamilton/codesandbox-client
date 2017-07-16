@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import MenuIconSVG from 'react-icons/lib/md/menu';
 
 import type { Sandbox } from 'common/types';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import Title from 'app/components/text/Title';
 import SubTitle from 'app/components/text/SubTitle';

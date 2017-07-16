@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -17,8 +17,8 @@ import { directoriesFromSandboxSelector } from 'app/store/entities/sandboxes/dir
 import { preferencesSelector } from '../../../store/preferences/selectors';
 
 const Container = styled.div`
+  composes: ${delayEffect(0.4)}
   position: relative;
-  ${delayEffect(0.4)}
   height: 500px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import fadeIn from 'app/utils/animation/fade-in';
 
 export const Icon = styled.div`
@@ -13,9 +13,9 @@ export const Icon = styled.div`
 `;
 
 export const IconArea = styled.div`
+  composes: ${fadeIn(0)};  
   position: absolute;
   right: 1rem;
   opacity: 0;
   line-height: 1;
-  ${fadeIn(0)}
 `;

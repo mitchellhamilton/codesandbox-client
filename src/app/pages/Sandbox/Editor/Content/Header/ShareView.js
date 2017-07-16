@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import ShareIcon from 'react-icons/lib/md/share';
 import Files from 'embed/components/Files';
 import ModeIcons from 'app/components/sandbox/ModeIcons';

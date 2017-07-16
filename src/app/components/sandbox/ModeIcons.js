@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import theme from 'common/theme';
 
 import Tooltip from 'app/components/Tooltip';

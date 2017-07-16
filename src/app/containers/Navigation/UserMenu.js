@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import delayEffect from 'app/utils/animation/delay-effect';
 import { Link } from 'react-router-dom';
 
@@ -8,11 +8,10 @@ import ExitIcon from 'react-icons/lib/md/exit-to-app';
 import { profileUrl } from '../../utils/url-generator';
 
 const Container = styled.div`
+  composes: ${delayEffect(0)};
   position: absolute;
   background-color: ${props => props.theme.background2.darken(0.5)};
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
-
-  ${delayEffect(0)}
 
   top: 40px;
   left: -20%;

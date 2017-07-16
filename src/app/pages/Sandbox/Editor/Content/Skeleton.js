@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import Fullscreen from 'app/components/flex/Fullscreen';
 import Title from 'app/components/text/Title';

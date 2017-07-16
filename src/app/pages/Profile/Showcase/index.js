@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { bindActionCreators } from 'redux';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { connect } from 'react-redux';
 import type { Sandbox } from 'common/types';
 import sandboxActionCreators from 'app/store/entities/sandboxes/actions';

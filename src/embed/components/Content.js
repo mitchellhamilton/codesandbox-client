@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Preview from 'app/components/sandbox/Preview';
 import CodeEditor from 'app/components/sandbox/CodeEditor';
 import { getModulePath } from 'app/store/entities/sandboxes/modules/selectors';

@@ -1,6 +1,6 @@
 // @flow eslint-disable
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import WorkspaceInputContainer from '../WorkspaceInputContainer';
 import Button from '../../../../../components/buttons/Button';

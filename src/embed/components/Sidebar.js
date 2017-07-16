@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'emotion/react';
 
 import type { Sandbox } from 'common/types';
 
@@ -43,8 +43,8 @@ const Description = styled.p`
 `;
 
 const Item = styled.div`
+  composes: ${({ hover, theme }) => hover && css`&:hover { background-color: ${theme.background.darken(0.3)()};}`};
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  ${({ hover, theme }) => hover && `&:hover { background-color: ${theme.background.darken(0.3)()};}`}
 `;
 
 const Version = styled.div`

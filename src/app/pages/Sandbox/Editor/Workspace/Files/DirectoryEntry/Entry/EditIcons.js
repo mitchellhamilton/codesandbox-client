@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import CrossIcon from 'react-icons/lib/md/clear';
 import EditIcon from 'react-icons/lib/go/pencil';
@@ -20,9 +20,8 @@ type Props = {
 };
 
 const Container = styled.div`
+  composes: ${fadeIn(0)};
   display: flex;
-  ${fadeIn(0)}
-
   vertical-align: middle;
   line-height: 1;
 `;

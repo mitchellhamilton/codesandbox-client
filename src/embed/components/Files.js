@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { sortBy } from 'lodash';
 
 import type { Module, Directory } from 'common/types';

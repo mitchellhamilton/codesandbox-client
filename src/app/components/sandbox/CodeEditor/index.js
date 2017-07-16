@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import CodeMirror from 'codemirror';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import type { Preferences, ModuleError } from 'common/types';
 
 import { getCodeMirror } from 'app/utils/codemirror';

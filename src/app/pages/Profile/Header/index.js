@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Navigation from 'app/containers/Navigation';
 import Padding from 'app/components/spacing/Padding';
 import Margin from 'app/components/spacing/Margin';

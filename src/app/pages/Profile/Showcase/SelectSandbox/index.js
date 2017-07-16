@@ -2,7 +2,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import type { CurrentUser } from 'common/types';
 import { currentUserSelector } from 'app/store/user/selectors';

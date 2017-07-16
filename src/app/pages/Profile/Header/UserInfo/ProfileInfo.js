@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Row from 'app/components/flex/Row';
 import Column from 'app/components/flex/Column';
 import delayEffect from 'app/utils/animation/delay-effect';
@@ -8,30 +8,28 @@ import Margin from 'app/components/spacing/Margin';
 import GithubIcon from 'react-icons/lib/go/mark-github';
 
 const ProfileImage = styled.img`
+  composes: ${delayEffect(0.05)};
   border-radius: 2px;
   margin-right: 1.5rem;
 
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   background-color: ${props => props.theme.background2};
-
-  ${delayEffect(0.05)};
 `;
 
 const Name = styled.div`
+  composes: ${delayEffect(0.1)};
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 0.25rem;
-  ${delayEffect(0.1)}
 `;
 
 const Username = styled.div`
+  composes: ${delayEffect(0.15)}
   display: flex;
   align-items: center;
   font-size: ${props => (props.main ? 1.5 : 1.25)}rem;
   font-weight: 200;
   color: ${props => (props.main ? 'white' : 'rgba(255, 255, 255, 0.6)')};
-  ${delayEffect(0.15)}
-
   margin-bottom: 1rem;
 `;
 

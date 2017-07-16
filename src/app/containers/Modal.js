@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'emotion/react';
 import { bindActionCreators } from 'redux';
 import Modal from 'react-modal';
 import type { Modal as ModalType } from 'common/types';

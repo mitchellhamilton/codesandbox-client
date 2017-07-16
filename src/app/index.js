@@ -2,7 +2,7 @@ import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'emotion/react/theming';
 import createHistory from 'history/createBrowserHistory';
 import { ConnectedRouter } from 'react-router-redux';
 import 'normalize.css';

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 export default styled.input`
   background-color: rgba(0, 0, 0, 0.3);

@@ -4,7 +4,7 @@ import { createSelector } from 'reselect';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 
 import type { Sandbox, User } from 'common/types';
 import sandboxActionCreators from 'app/store/entities/sandboxes/actions';

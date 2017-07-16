@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'emotion/react';
 import HeartIcon from 'react-icons/lib/fa/heart-o';
 import FullHeartIcon from 'react-icons/lib/fa/heart';
 
@@ -15,18 +15,16 @@ type Props = {
 };
 
 const Container = styled.div`
-  display: inline-block;
-  transition: 0.3s ease all;
-
-  transform: scale(1);
-
-  ${props =>
+  composes: ${props =>
     props.loggedIn &&
     css`
   cursor: pointer;
   &:hover {
     transform: scale(1.1);
   }`};
+  display: inline-block;
+  transition: 0.3s ease all;
+  transform: scale(1);
 `;
 
 const MaybeTooltip = ({ loggedIn, ...props }) =>

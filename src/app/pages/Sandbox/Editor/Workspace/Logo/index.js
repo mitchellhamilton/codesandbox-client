@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'emotion/react';
 
 import LogoIcon from 'app/components/Logo';
 import theme from 'common/theme';

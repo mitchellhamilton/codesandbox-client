@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'emotion/react';
 import moment from 'moment';
 
 import type { SmallSandbox } from 'common/types';
 
 const Button = styled.button`
+  composes: ${props => props.active && css`font-weight: 600`};  
   display: flex;
   justify-content: space-between;
   transition: 0.3s ease all;
@@ -17,7 +18,6 @@ const Button = styled.button`
   color: rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid #ddd;
   text-align: left;
-  ${props => props.active && 'font-weight: 600'};
   cursor: ${props => (props.active ? 'default' : 'pointer')};
 
   &:hover {

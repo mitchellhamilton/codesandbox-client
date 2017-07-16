@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import { Link } from 'react-router-dom';
 import { sandboxUrl } from 'app/utils/url-generator';
 import delayEffect from 'app/utils/animation/delay-effect';
@@ -10,6 +10,7 @@ import LikeHeart from 'app/containers/LikeHeart';
 import PlayButton from './PlayButton';
 
 const Container = styled.div`
+  composes: ${delayEffect(0.35)};
   background-color: #272C2E;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
@@ -19,8 +20,6 @@ const Container = styled.div`
   flex-direction: column;
 
   margin-bottom: 2rem;
-
-  ${delayEffect(0.35)}
 `;
 
 const Title = styled.h1`
@@ -55,6 +54,7 @@ const Stats = styled.div`
 `;
 
 const PlayButtonContainer = styled(Link)`
+  composes: ${delayEffect(0.5)};
   position: absolute;
   display: flex;
   justify-content: center;
@@ -63,8 +63,6 @@ const PlayButtonContainer = styled(Link)`
   right: 0;
 
   cursor: pointer;
-
-  ${delayEffect(0.5)}
 `;
 
 type Props = {

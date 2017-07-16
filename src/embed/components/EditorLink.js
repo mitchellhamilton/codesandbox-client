@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'emotion/react';
 import Logo from 'app/components/Logo';
 
 type Props = {
@@ -20,7 +20,7 @@ const EditText = styled.a`
 
 const Text = styled.span`
   @media (max-width: 620px) {
-    ${props => (props.small ? 'display: none;' : '')};
+    display: ${props => (props.small ? 'none' : 'initial')};
   }
 `;
 
