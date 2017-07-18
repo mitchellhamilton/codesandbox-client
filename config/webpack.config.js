@@ -147,13 +147,14 @@ const config = {
     ]
   },
   resolve: {
-    mainFields: ['browser', 'module', 'jsnext:main', 'main'],
+    mainFields: ['browser','main'],
     modules: ['src', 'node_modules'],
 
     extensions: ['.js', '.json'],
 
     alias: {
       moment: 'moment/moment.js',
+      'emotion/react': require.resolve('./emotion'),
     }
   },
 

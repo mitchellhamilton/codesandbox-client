@@ -65,8 +65,7 @@ const Button = styled.div`
   text-align: center;
   cursor: pointer;
   padding: 0.5rem;
-  background-color:
-    ${props => {
+  background-color: ${props => {
       if (props.type === 'error') return theme.redBackground.lighten(0.2);
       if (props.type === 'warning') return theme.primary.darken(0.5);
       return theme.secondary.darken(0.1);
@@ -74,8 +73,7 @@ const Button = styled.div`
   font-weight: 500;
 
   &:hover {
-    background-color:
-      ${props => {
+    background-color: ${props => {
         if (props.type === 'error') return theme.redBackground.lighten(0.1);
         if (props.type === 'warning') return theme.primary.darken(0.6);
         return theme.secondary.darken(0.2);

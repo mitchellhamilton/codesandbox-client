@@ -40,7 +40,7 @@ const Container = styled(Fullscreen)`
 `;
 
 const Content = styled(Fullscreen)`
-  border-top: 1px solid ${props => props.theme.background3};
+  border-top: 1px solid ${props => props.theme.background3()};
   flex: 0 0 70px;
 `;
 

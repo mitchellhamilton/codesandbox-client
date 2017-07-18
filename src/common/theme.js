@@ -34,6 +34,10 @@ const addModifier = (fn, method, ...modifierArgs) => (...args) =>
  */
 const decorateSelector = selector => {
   // add member functions to our selector
+  Object.defineProperty(selector, 'toString', {
+    enunmerable: false,
+    value: selector
+  })
   colorMethods.forEach(method => {
     selector[method] = (...args) =>
       decorateSelector(addModifier(selector, method, ...args));
@@ -58,5 +62,7 @@ const theme = createTheme({
   redBackground: '#400000',
   red: '#F27777',
 });
+
+console.log(theme)
 
 export default theme;
